@@ -1,6 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import calculate from '../logic/calculate';
+import Buttons from './Calbuttons';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -27,15 +28,12 @@ class Calculator extends React.Component {
   };
 
   render() {
-    const buttons = ['AC', '+/-', '%', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];
     const { operation, next, total } = this.state;
     const display = (total || '') + (operation || '') + (next || '');
     return (
       <div className="calculator">
         <p className="result">{display}</p>
-        <div className="buttons">
-          {buttons.map((btn) => <button key={btn} type="button" onClick={this.btnClicked}>{btn}</button>)}
-        </div>
+        <Buttons btnClicked={this.btnClicked} />
       </div>
     );
   }
