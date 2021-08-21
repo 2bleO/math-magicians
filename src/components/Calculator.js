@@ -1,42 +1,32 @@
-/* eslint-disable react/prefer-stateless-function */
-import React from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import Buttons from './Calbuttons';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      operation: null,
-      next: null,
-      total: null,
-    };
-    this.btnClicked = this.btnClicked.bind(this);
-  }
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  btnClicked = (event) => {
+  const btnClicked = (event) => {
     const buttonName = event.target.innerText;
-    const result = calculate(this.state, buttonName);
-    this.setState((previousState) => {
-      const { operation, next, total } = previousState;
-      return {
-        operation: ((result.operation === undefined) ? operation : result.operation),
-        next: ((result.next === undefined) ? next : result.next),
-        total: ((result.total === undefined) ? total : result.total),
-      };
+    const result = calculate(state, buttonName);
+    const { operation, next, total } = state;
+    setState({
+      operation: ((result.operation === undefined) ? operation : result.operation),
+      next: ((result.next === undefined) ? next : result.next),
+      total: ((result.total === undefined) ? total : result.total),
     });
   };
 
-  render() {
-    const { operation, next, total } = this.state;
-    const display = (total || '') + (operation || '') + (next || '');
-    return (
-      <div className="calculator">
-        <p className="result">{display}</p>
-        <Buttons btnClicked={this.btnClicked} />
-      </div>
-    );
-  }
-}
+  const display = (state.total || '') + (state.operation || '') + (state.next || '');
+  return (
+    <div className="calculator">
+      <p className="result">{display}</p>
+      <Buttons onClick={btnClicked} />
+    </div>
+  );
+};
 
 export default Calculator;
