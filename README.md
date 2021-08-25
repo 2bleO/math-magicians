@@ -26,7 +26,6 @@
 - Run `npm start`
 
 # Author
-:bust_in_silhouette: Tolibjon Tolibov
 - GitHub: [@2bleO](https://github.com/2bleO)
 - Twitter: [@OleaOnesis](https://twitter.com/OleaOnesis)
 - LinkedIn: [Onesis Olea](https://do.linkedin.com/in/onesis-olea)
