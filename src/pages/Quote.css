@@ -1,0 +1,18 @@
+.Quote {
+    display: flex;
+    align-items: center;
+  }
+  
+  .q_container {
+    width: 75%;
+    margin: 12% auto;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .author {
+    color: #ff3300;
+    align-self: flex-end;
+  }
