@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+h2 {
+  color: rgb(104, 102, 102);
+  margin: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
 .calculator {
   width: 40%;
   margin: 5% auto;
