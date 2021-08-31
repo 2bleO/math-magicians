@@ -7,6 +7,12 @@
 ![screenshot](https://github.com/2bleO/math-magicians/blob/e9284eb263885b5018361539fca30b4256342f10/snapshot.png)
 
 [Live Demo Link](https://2bleo.github.io/math-magicians/)
+
+[Heroku](https://math-magicians-2bleo.herokuapp.com)
+
+[Netlify](https://sharp-kirch-0701b0.netlify.app)
+
+
 # Built With
 
 - React
